@@ -21,5 +21,13 @@ def encode:
         encoded_password += encoded_digit
     return encoded_password
 
+# Hi! I'm going to add a decoder function!
+def decode:
+    decoded_password = ""
+    for digit in encoded_password:
+        decoded_digit = str((int(digit)-3) % 10)
+        decoded_password += decoded_digit
+    return decoded_password
+
 if __name__ == "__main__":
     main()
