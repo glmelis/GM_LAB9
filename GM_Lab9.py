@@ -1,3 +1,5 @@
+#Gian-Luca Melis
+#Decoder added by Katelyn Fry
 def main():
     while True:
         print("Menu\n"
@@ -8,7 +10,11 @@ def main():
         option = input("Please enter an option: ")
         if option == "1":
             password = input("Please enter your password to encode: ")
-            encode(password)
+            encoded = encode(password)
+            print("Your password has been encoded and stored!\n")
+        if option == "2":
+            decoded = decode(encoded)
+            print(f"The encoded password is {encoded}, and the original password is {decoded}")
         if option == "3":
             break
         else:
